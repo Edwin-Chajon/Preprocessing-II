@@ -1,1 +1,30 @@
-// Mixins in here
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "global";
+@import "navigation";
+@import "footer";
+@import "home-page";
+
+
+   .btn{
+    .custom-btn(teal, 100px, lavender);
+    display: flex;
+    justify-content: center;
+  } 
+  .custom-btn(@bgcolor:yellow, @width:250px, @font-color:black){
+    display: block;
+    background-color: @bgcolor;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    width: @width;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 10px;
+    color:@font-color;
+    
+    &:hover{
+      background-color:@font-color;
+      color:@bgcolor;
+    }
+}
